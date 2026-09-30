@@ -1,0 +1,27 @@
+{
+  "total_movies": 9742,
+  "total_ratings": 100836,
+  "global_mean_rating": 3.501556983616962,
+  "vote_threshold_m": 12.0,
+  "genres": [
+    "Action",
+    "Adventure",
+    "Animation",
+    "Children",
+    "Comedy",
+    "Crime",
+    "Documentary",
+    "Drama",
+    "Fantasy",
+    "Film-Noir",
+    "Horror",
+    "IMAX",
+    "Musical",
+    "Mystery",
+    "Romance",
+    "Sci-Fi",
+    "Thriller",
+    "War",
+    "Western"
+  ]
+}

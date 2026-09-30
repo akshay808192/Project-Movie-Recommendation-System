@@ -1,0 +1,291 @@
+{
+  "files_analyzed": {
+    "movies.csv": {
+      "file_name": "movies.csv",
+      "file_size_bytes": 494431,
+      "rows": 9742,
+      "columns": 3,
+      "column_names": [
+        "movieId",
+        "title",
+        "genres"
+      ],
+      "data_types": {
+        "movieId": "int64",
+        "title": "str",
+        "genres": "str"
+      },
+      "missing_values": {
+        "movieId": 0,
+        "title": 0,
+        "genres": 0
+      },
+      "missing_percentages": {
+        "movieId": 0.0,
+        "title": 0.0,
+        "genres": 0.0
+      },
+      "duplicate_records": 0
+    },
+    "ratings.csv": {
+      "file_name": "ratings.csv",
+      "file_size_bytes": 2483723,
+      "rows": 100836,
+      "columns": 4,
+      "column_names": [
+        "userId",
+        "movieId",
+        "rating",
+        "timestamp"
+      ],
+      "data_types": {
+        "userId": "int64",
+        "movieId": "int64",
+        "rating": "float64",
+        "timestamp": "int64"
+      },
+      "missing_values": {
+        "userId": 0,
+        "movieId": 0,
+        "rating": 0,
+        "timestamp": 0
+      },
+      "missing_percentages": {
+        "userId": 0.0,
+        "movieId": 0.0,
+        "rating": 0.0,
+        "timestamp": 0.0
+      },
+      "duplicate_records": 0
+    },
+    "links.csv": {
+      "file_name": "links.csv",
+      "file_size_bytes": 197979,
+      "rows": 9742,
+      "columns": 3,
+      "column_names": [
+        "movieId",
+        "imdbId",
+        "tmdbId"
+      ],
+      "data_types": {
+        "movieId": "int64",
+        "imdbId": "int64",
+        "tmdbId": "float64"
+      },
+      "missing_values": {
+        "movieId": 0,
+        "imdbId": 0,
+        "tmdbId": 8
+      },
+      "missing_percentages": {
+        "movieId": 0.0,
+        "imdbId": 0.0,
+        "tmdbId": 0.08
+      },
+      "duplicate_records": 0
+    },
+    "tags.csv": {
+      "file_name": "tags.csv",
+      "file_size_bytes": 118660,
+      "rows": 3683,
+      "columns": 4,
+      "column_names": [
+        "userId",
+        "movieId",
+        "tag",
+        "timestamp"
+      ],
+      "data_types": {
+        "userId": "int64",
+        "movieId": "int64",
+        "tag": "str",
+        "timestamp": "int64"
+      },
+      "missing_values": {
+        "userId": 0,
+        "movieId": 0,
+        "tag": 0,
+        "timestamp": 0
+      },
+      "missing_percentages": {
+        "userId": 0.0,
+        "movieId": 0.0,
+        "tag": 0.0,
+        "timestamp": 0.0
+      },
+      "duplicate_records": 0
+    }
+  },
+  "users_summary": {
+    "unique_users_in_ratings": 610,
+    "unique_users_in_tags": 58,
+    "total_unique_users": 610,
+    "user_activity": {
+      "min_ratings_per_user": 20,
+      "max_ratings_per_user": 2698,
+      "mean_ratings_per_user": 165.3,
+      "median_ratings_per_user": 70.5,
+      "q25": 35.0,
+      "q75": 168.0
+    }
+  },
+  "movies_summary": {
+    "catalog_movies": 9742,
+    "rated_movies": 9724,
+    "tagged_movies": 1572,
+    "unrated_catalog_movies": 18,
+    "popularity_distribution": {
+      "min_ratings_per_movie": 1,
+      "max_ratings_per_movie": 329,
+      "mean_ratings_per_movie": 10.37,
+      "median_ratings_per_movie": 3.0,
+      "q80_threshold": 12.0,
+      "movies_with_only_1_rating": 3446,
+      "movies_with_ge_10_ratings": 2269,
+      "movies_with_ge_50_ratings": 450,
+      "movies_with_ge_100_ratings": 138
+    }
+  },
+  "rating_distribution": {
+    "counts": {
+      "0.5": 1370,
+      "1.0": 2811,
+      "1.5": 1791,
+      "2.0": 7551,
+      "2.5": 5550,
+      "3.0": 20047,
+      "3.5": 13136,
+      "4.0": 26818,
+      "4.5": 8551,
+      "5.0": 13211
+    },
+    "percentages": {
+      "0.5": 1.36,
+      "1.0": 2.79,
+      "1.5": 1.78,
+      "2.0": 7.49,
+      "2.5": 5.5,
+      "3.0": 19.88,
+      "3.5": 13.03,
+      "4.0": 26.6,
+      "4.5": 8.48,
+      "5.0": 13.1
+    }
+  },
+  "rating_statistical_summary": {
+    "min": 0.5,
+    "max": 5.0,
+    "mean": 3.5016,
+    "std": 1.0425,
+    "median": 3.5,
+    "q25": 3.0,
+    "q75": 4.0
+  },
+  "genres_analysis": {
+    "total_unique_genres": 20,
+    "genre_distribution": {
+      "Drama": 4361,
+      "Comedy": 3756,
+      "Thriller": 1894,
+      "Action": 1828,
+      "Romance": 1596,
+      "Adventure": 1263,
+      "Crime": 1199,
+      "Sci-Fi": 980,
+      "Horror": 978,
+      "Fantasy": 779,
+      "Children": 664,
+      "Animation": 611,
+      "Mystery": 573,
+      "Documentary": 440,
+      "War": 382,
+      "Musical": 334,
+      "Western": 167,
+      "IMAX": 158,
+      "Film-Noir": 87,
+      "(no genres listed)": 34
+    },
+    "movies_no_genre": 34
+  },
+  "title_analysis": {
+    "total_titles": 9742,
+    "titles_with_year": 9729,
+    "titles_without_year": 13,
+    "earliest_year": 1902,
+    "latest_year": 2018,
+    "duplicate_titles": 5
+  },
+  "identifier_columns": {
+    "movie_id_info": {
+      "source_catalog_key": "movieId in movies.csv (int64)",
+      "interaction_foreign_key": "movieId in ratings.csv (int64)",
+      "links_foreign_key": "movieId in links.csv (int64)",
+      "tags_foreign_key": "movieId in tags.csv (int64)",
+      "id_alignment": {
+        "catalog_movies": 9742,
+        "rated_movies": 9724,
+        "unrated_catalog_movies": 18,
+        "foreign_key_integrity": "100% valid (all movieId values in ratings exist in movies.csv)"
+      }
+    },
+    "user_id_info": {
+      "primary_interaction_key": "userId in ratings.csv (int64)",
+      "tags_key": "userId in tags.csv (int64)",
+      "user_id_range": "1 to 610",
+      "is_contiguous": true
+    }
+  },
+  "timestamp_analysis": {
+    "column": "timestamp (Unix epoch seconds)",
+    "min_epoch": 828124615,
+    "max_epoch": 1537799250,
+    "start_date": "1996-03-29 18:36:55 UTC",
+    "end_date": "2018-09-24 14:27:30 UTC",
+    "duration_days": 8213.8,
+    "utility": "Represents interaction sequence order / historical timeline for temporal evaluation and watch logs."
+  },
+  "collaborative_filtering_suitability": {
+    "collaborative_filtering_possible": true,
+    "identified_user_id_column": "userId",
+    "identified_movie_id_column": "movieId",
+    "identified_rating_interaction_column": "rating",
+    "matrix_shape": "610 users \u00d7 9724 movies",
+    "matrix_sparsity_pct": 98.3,
+    "assessment_factors": [
+      "Substantial explicit interaction volume (100,836 ratings)",
+      "Guaranteed user history density: every user has >= 20 ratings (median 70.5)",
+      "Sufficient item overlap: 2,269 movies have >= 10 reviews",
+      "User-Item Matrix Sparsity: 98.30% (standard for collaborative filtering benchmarks)"
+    ]
+  },
+  "join_architecture": {
+    "primary_interaction_table": "ratings.csv",
+    "item_metadata_table": "movies.csv",
+    "external_identifiers_table": "links.csv",
+    "user_semantic_tags_table": "tags.csv",
+    "joins": [
+      {
+        "left_table": "ratings.csv",
+        "right_table": "movies.csv",
+        "join_key": "movieId",
+        "type": "LEFT JOIN",
+        "purpose": "Attach title, year, and genres to user rating events."
+      },
+      {
+        "left_table": "movies.csv",
+        "right_table": "links.csv",
+        "join_key": "movieId",
+        "type": "LEFT JOIN",
+        "purpose": "Attach IMDb IDs (e.g. tt0114709) and TMDb IDs for external links, trailer discovery, and posters."
+      },
+      {
+        "left_table": "movies.csv",
+        "right_table": "tags.csv",
+        "join_key": "movieId",
+        "type": "LEFT JOIN (Grouped/Aggregated)",
+        "purpose": "Aggregate user-generated descriptive tags into an array of keywords per movie for search and metadata display."
+      }
+    ]
+  }
+}

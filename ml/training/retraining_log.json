@@ -1,0 +1,9 @@
+{
+  "retrained_at": "2026-09-30T11:06:29.806752",
+  "total_ratings": 100861,
+  "new_db_ratings": 25,
+  "n_users": 615,
+  "n_movies": 9742,
+  "total_similarity_edges": 948286,
+  "training_seconds": 4.65
+}

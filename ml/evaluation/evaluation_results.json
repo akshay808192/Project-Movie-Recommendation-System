@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "total_users": 610,
+    "total_movies": 9742,
+    "train_ratings": 80896,
+    "test_ratings": 19940,
+    "eval_users_count": 599,
+    "rating_threshold": 3.5
+  },
+  "popularity_baseline": {
+    "catalog_coverage_pct": 0.66,
+    "distinct_items_recommended": 64,
+    "precision@5": 0.0978,
+    "recall@5": 0.0261,
+    "hit_rate@5": 0.3255,
+    "ndcg@5": 0.1106,
+    "precision@10": 0.0863,
+    "recall@10": 0.051,
+    "hit_rate@10": 0.4441,
+    "ndcg@10": 0.105,
+    "precision@20": 0.071,
+    "recall@20": 0.089,
+    "hit_rate@20": 0.591,
+    "ndcg@20": 0.1057
+  },
+  "collaborative_filtering": {
+    "catalog_coverage_pct": 21.79,
+    "distinct_items_recommended": 2123,
+    "precision@5": 0.0851,
+    "recall@5": 0.0444,
+    "hit_rate@5": 0.3205,
+    "ndcg@5": 0.1035,
+    "precision@10": 0.0659,
+    "recall@10": 0.0696,
+    "hit_rate@10": 0.4124,
+    "ndcg@10": 0.0975,
+    "precision@20": 0.0463,
+    "recall@20": 0.0971,
+    "hit_rate@20": 0.4975,
+    "ndcg@20": 0.0973
+  }
+}

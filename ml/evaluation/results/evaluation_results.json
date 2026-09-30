@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "timestamp": "2026-09-30T13:32:19.242430",
+    "evaluation_strategy": "Per-User Temporal Split (No Data Leakage)",
+    "test_ratio": 0.2,
+    "relevance_threshold": 3.5,
+    "total_ratings": 100836,
+    "train_ratings": 80896,
+    "test_ratings": 19940,
+    "active_eval_users": 594,
+    "catalog_movies": 9742
+  },
+  "results": {
+    "Popularity Baseline": {
+      "catalog_coverage_pct": 0.85,
+      "unique_items_recommended": 83,
+      "precision@5": 0.0505,
+      "recall@5": 0.0164,
+      "hit_rate@5": 0.1936,
+      "map@5": 0.033,
+      "precision@10": 0.0481,
+      "recall@10": 0.0309,
+      "hit_rate@10": 0.2862,
+      "map@10": 0.0262,
+      "precision@20": 0.0443,
+      "recall@20": 0.0634,
+      "hit_rate@20": 0.4007,
+      "map@20": 0.0243
+    },
+    "Collaborative Filtering": {
+      "catalog_coverage_pct": 18.68,
+      "unique_items_recommended": 1820,
+      "precision@5": 0.0582,
+      "recall@5": 0.0273,
+      "hit_rate@5": 0.2205,
+      "map@5": 0.038,
+      "precision@10": 0.0465,
+      "recall@10": 0.0444,
+      "hit_rate@10": 0.3013,
+      "map@10": 0.0283,
+      "precision@20": 0.0345,
+      "recall@20": 0.0675,
+      "hit_rate@20": 0.3855,
+      "map@20": 0.0248
+    },
+    "Hybrid Recommender": {
+      "catalog_coverage_pct": 9.73,
+      "unique_items_recommended": 948,
+      "precision@5": 0.0805,
+      "recall@5": 0.0314,
+      "hit_rate@5": 0.2727,
+      "map@5": 0.0497,
+      "precision@10": 0.066,
+      "recall@10": 0.0495,
+      "hit_rate@10": 0.3535,
+      "map@10": 0.0376,
+      "precision@20": 0.0497,
+      "recall@20": 0.0757,
+      "hit_rate@20": 0.4495,
+      "map@20": 0.0314
+    }
+  }
+}
