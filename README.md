@@ -1,4 +1,10 @@
-# Movie Recommendation System Using Collaborative Filtering with Popularity-Based Cold Start
+<div align="center">
+
+# CineMatch AI — Movie Recommendation System
+### Collaborative Filtering with Popularity-Based Cold Start
+
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20Website-00DF8F?style=for-the-badge&logo=vercel&logoColor=white)](https://project-movie-recommendation-system.vercel.app/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/akshay808192/Project-Movie-Recommendation-System)
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110%2B-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
@@ -7,7 +13,11 @@
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.4%2B-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
 
-An end-to-end full-stack machine learning project built with Python, FastAPI, Scikit-Learn, and React.
+An end-to-end full-stack machine learning movie recommendation platform built with Python, FastAPI, Scikit-Learn, and React 19.
+
+**[🌐 Experience the Live Application ➔](https://project-movie-recommendation-system.vercel.app/)**
+
+</div>
 
 ---
 
@@ -156,11 +166,16 @@ npm run dev
 ```
 Navigate to `http://localhost:5173` in your browser.
 
-## 21. Production Deployment Guide
+## 21. Live Production Deployment
 
-### Recommended Stack:
-- **Backend API**: [Render.com](https://render.com) (Free tier web service) or [Railway.app](https://railway.app)
-- **Frontend SPA**: [Vercel](https://vercel.com) (Free global CDN, instant deployments) or [Netlify](https://netlify.com)
+The platform is actively deployed and accessible worldwide:
+- 🌐 **Live Web Application (Vercel)**: [https://project-movie-recommendation-system.vercel.app/](https://project-movie-recommendation-system.vercel.app/)
+- ⚡ **Backend API Service (Render)**: [https://cinematch-ai.onrender.com](https://cinematch-ai.onrender.com)
+- 📖 **Interactive Swagger API Docs**: [https://cinematch-ai.onrender.com/docs](https://cinematch-ai.onrender.com/docs)
+
+### Deployment Architecture:
+- **Backend API**: Hosted on [Render.com](https://render.com) (Docker containerized, auto-scaling FastAPI + Scikit-Learn).
+- **Frontend SPA**: Hosted on [Vercel](https://vercel.com) (Global Edge CDN, React 19 + Vite).
 
 ---
 
