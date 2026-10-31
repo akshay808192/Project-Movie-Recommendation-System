@@ -1,5 +1,12 @@
 # Movie Recommendation System Using Collaborative Filtering with Popularity-Based Cold Start
 
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.110%2B-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.4%2B-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+
 An end-to-end full-stack machine learning project built with Python, FastAPI, Scikit-Learn, and React.
 
 ---
@@ -162,8 +169,17 @@ python ml/training/retrain.py
 ```
 This automatically runs preprocessing, matrix computation, artifact generation, and evaluation reporting sequentially.
 
-## 23. Screenshots
-*(Add screenshots of the Home page, Movie Details modal, Search interface, and Onboarding flow here)*
+## 23. UI Showcase & Screenshots
+The frontend is designed with a premium cinematic streaming aesthetic (Netflix/Prime-style) utilizing CSS glassmorphism, dynamic backdrop blurs, and responsive cards:
+
+| View / Feature | Visual Description |
+| :--- | :--- |
+| **Cinematic Hero & Navbar** | Full-width dynamic hero spotlighting trending blockbusters, glassmorphic floating navbar, and quick search. |
+| **Recommendation Feed** | Adaptive recommendation rail dynamically tagged with strategy badges (`Popularity`, `Hybrid`, `Collaborative`). |
+| **Movie Details Modal** | High-resolution poster art, genres, IMDb/TMDb links, interactive 5-star rating system, and "More Like This" collaborative rail. |
+| **Instant Search & Filter** | Debounced real-time query searching by title, actor, or genre tags without page reloads. |
+| **User Profile & History** | Dedicated tabs tracking user's rated catalog, favorite bookmarks, and chronological watch history. |
+| **New-User Onboarding** | Optional 2-step taste profile selector allowing new visitors to jump straight into hybrid recommendations. |
 
 ## 24. Future Scope
 - **Content-Based Filtering**: Integrate NLP (TF-IDF) on movie descriptions and cast metadata to handle newly added items (Item Cold Start).

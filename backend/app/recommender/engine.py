@@ -25,6 +25,14 @@ class RecommenderEngine:
         if not os.path.exists(artifact_path):
             artifact_path = "ml/models/recommender_artifacts.pkl"
 
+        if not os.path.exists(artifact_path):
+            print("Model artifacts not found. Automatically training recommender model...")
+            from ml.training.train import train_recommender
+            train_recommender()
+            artifact_path = "backend/models/recommender_artifacts.pkl"
+            if not os.path.exists(artifact_path):
+                artifact_path = "ml/models/recommender_artifacts.pkl"
+
         with open(artifact_path, 'rb') as f:
             self.artifacts = pickle.load(f)
 
