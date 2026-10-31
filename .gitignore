@@ -25,10 +25,12 @@ share/python-wheels/
 # Data & Models
 data/processed/
 data/app.db
-ml/models/
-backend/models/
-*.pkl
 *.npz
+!backend/models/
+!backend/models/*.pkl
+!ml/models/
+!ml/models/*.pkl
+!ml/models/*.json
 
 # Frontend
 frontend/node_modules/

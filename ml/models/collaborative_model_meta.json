@@ -1,0 +1,19 @@
+{
+  "model_type": "item_item_collaborative_filtering",
+  "algorithm": "normalized_cosine_similarity_top_k",
+  "version": "2.0.0",
+  "trained_at": "2026-09-30T10:42:29.685800",
+  "training_time_seconds": 5.16,
+  "parameters": {
+    "top_k_neighbors": 100,
+    "min_similarity": 0.02,
+    "n_users": 610,
+    "n_movies": 9742,
+    "total_interactions": 100836
+  },
+  "graph_statistics": {
+    "total_movies": 9742,
+    "total_edges": 948286,
+    "average_neighbors_per_movie": 97.34
+  }
+}
