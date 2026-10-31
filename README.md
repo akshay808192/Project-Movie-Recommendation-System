@@ -156,20 +156,56 @@ npm run dev
 ```
 Navigate to `http://localhost:5173` in your browser.
 
-## 21. How to Train Model
+## 21. Production Deployment Guide
+
+### Recommended Stack:
+- **Backend API**: [Render.com](https://render.com) (Free tier web service) or [Railway.app](https://railway.app)
+- **Frontend SPA**: [Vercel](https://vercel.com) (Free global CDN, instant deployments) or [Netlify](https://netlify.com)
+
+---
+
+### Step 1: Deploy Backend on Render
+1. Push your repository to GitHub (`git push origin master`).
+2. Sign in to [Render.com](https://render.com) and click **New + > Web Service**.
+3. Connect your repository `akshay808192/Project-Movie-Recommendation-System`.
+4. Configure the service settings:
+   - **Name**: `cinematch-api`
+   - **Runtime**: `Python 3`
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT`
+5. Under **Environment Variables**, add:
+   - `PYTHONPATH`: `.`
+   - `JWT_SECRET_KEY`: `<any-secure-random-secret-key>`
+6. Click **Deploy Web Service**. Render will install dependencies, automatically bootstrap the database and ML artifacts, and provide a public URL (e.g., `https://cinematch-api.onrender.com`).
+
+---
+
+### Step 2: Deploy Frontend on Vercel
+1. Sign in to [Vercel](https://vercel.com) and click **Add New > Project**.
+2. Select `Project-Movie-Recommendation-System`.
+3. Configure project settings:
+   - **Framework Preset**: `Vite`
+   - **Root Directory**: `frontend`
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+4. Expand **Environment Variables** and add:
+   - `VITE_API_BASE_URL`: `https://cinematch-api.onrender.com/api` *(replace with your actual Render API URL)*
+5. Click **Deploy**. Vercel will build and host your frontend on a high-speed global edge network.
+
+## 22. How to Train Model
 To run the evaluation benchmarks from scratch and test the algorithms:
 ```powershell
 python backend/scripts/evaluate.py
 ```
 
-## 22. How to Retrain Model
+## 23. How to Retrain Model
 As users interact with the app, their preferences are saved to the database. To ingest these new interactions and update the global similarity matrix, run the orchestration script:
 ```powershell
 python ml/training/retrain.py
 ```
 This automatically runs preprocessing, matrix computation, artifact generation, and evaluation reporting sequentially.
 
-## 23. UI Showcase & Screenshots
+## 24. UI Showcase & Screenshots
 The frontend is designed with a premium cinematic streaming aesthetic (Netflix/Prime-style) utilizing CSS glassmorphism, dynamic backdrop blurs, and responsive cards:
 
 | View / Feature | Visual Description |
@@ -181,11 +217,11 @@ The frontend is designed with a premium cinematic streaming aesthetic (Netflix/P
 | **User Profile & History** | Dedicated tabs tracking user's rated catalog, favorite bookmarks, and chronological watch history. |
 | **New-User Onboarding** | Optional 2-step taste profile selector allowing new visitors to jump straight into hybrid recommendations. |
 
-## 24. Future Scope
+## 25. Future Scope
 - **Content-Based Filtering**: Integrate NLP (TF-IDF) on movie descriptions and cast metadata to handle newly added items (Item Cold Start).
 - **Matrix Factorization**: Implement Singular Value Decomposition (SVD) or Neural Collaborative Filtering to capture deeper latent semantic relationships.
 - **Cloud Deployment**: Containerize the app via Docker and deploy to AWS or Heroku using PostgreSQL.
 
-## 25. Limitations
+## 26. Limitations
 - **Item Cold-Start**: If a brand-new movie is added to the database with 0 ratings, Collaborative Filtering cannot recommend it to anyone until at least a few users rate it.
 - **Memory Scaling**: The current script computes a full `N x N` dense matrix during training. While fine for 9,700 movies, scaling to 100,000+ movies would require Spark or approximate nearest neighbor algorithms (e.g., FAISS).

@@ -3,7 +3,7 @@
  * Connects React Frontend to FastAPI Recommender Backend
  */
 
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api';
 
 function getAuthHeader() {
   const token = localStorage.getItem('cinematch_token');
